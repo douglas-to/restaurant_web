@@ -15,10 +15,10 @@ if(isset($message)){
 
    <section class="flex">
 
-      <a href="home.php" class="logo">yum-yum 😋</a>
+      <a href="index.php" class="logo">yum-yum 😋</a>
 
       <nav class="navbar">
-         <a href="home.php">Home</a>
+         <a href="index.php">Home</a>
          <a href="about.php">Sobre</a>
          <a href="menu.php">Menu</a>
          <a href="orders.php">Pedidos</a>

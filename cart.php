@@ -8,7 +8,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
-   header('location:home.php');
+   header('location:index.php');
 };
 
 if(isset($_POST['delete'])){
@@ -61,7 +61,7 @@ $grand_total = 0;
 
 <div class="heading">
    <h3>Carrinho de Compras</h3>
-   <p><a href="home.php">Home</a> <span> / Carrinho</span></p>
+   <p><a href="index.php">Home</a> <span> / Carrinho</span></p>
 </div>
 
 <!-- shopping cart section starts  -->
