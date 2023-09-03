@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
       $_SESSION['admin_id'] = $fetch_admin_id['id'];
       header('location:dashboard.php');
    }else{
-      $message[] = 'incorrect username or password!';
+      $message[] = 'Email ou Senha, incorretos!';
    }
 
 }
@@ -27,12 +27,12 @@ if(isset($_POST['submit'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>login</title>
+   <title>Admin Login</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -61,26 +61,16 @@ if(isset($message)){
 <section class="form-container">
 
    <form action="" method="POST">
-      <h3>login now</h3>
-      <p>default username = <span>admin</span> & password = <span>111</span></p>
-      <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="login now" name="submit" class="btn">
+      <h3>Entrar agora</h3>
+      <p>Nome de usuário = <span>admin</span> & senha = <span>111</span></p>
+      <input type="text" name="name" maxlength="20" required placeholder="Digite seu nome de usuário" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" maxlength="20" required placeholder="Digite sua senha" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="Entrar" name="submit" class="btn">
    </form>
 
 </section>
 
 <!-- admin login form section ends -->
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

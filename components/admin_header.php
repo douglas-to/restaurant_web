@@ -18,12 +18,12 @@ if(isset($message)){
       <a href="dashboard.php" class="logo">Admin<span>Panel</span></a>
 
       <nav class="navbar">
-         <a href="dashboard.php">home</a>
-         <a href="products.php">products</a>
-         <a href="placed_orders.php">orders</a>
-         <a href="admin_accounts.php">admins</a>
-         <a href="users_accounts.php">users</a>
-         <a href="messages.php">messages</a>
+         <a href="dashboard.php">Home</a>
+         <a href="products.php">Produtos</a>
+         <a href="placed_orders.php">Pedidos</a>
+         <a href="admin_accounts.php">ADMs</a>
+         <a href="users_accounts.php">Usuários</a>
+         <a href="messages.php">Mensagens</a>
       </nav>
 
       <div class="icons">
@@ -38,12 +38,12 @@ if(isset($message)){
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
          ?>
          <p><?= $fetch_profile['name']; ?></p>
-         <a href="update_profile.php" class="btn">update profile</a>
+         <a href="update_profile.php" class="btn">Atualizar perfil</a>
          <div class="flex-btn">
-            <a href="admin_login.php" class="option-btn">login</a>
-            <a href="register_admin.php" class="option-btn">register</a>
+            <a href="admin_login.php" class="option-btn">Login</a>
+            <a href="register_admin.php" class="option-btn">Registrar</a>
          </div>
-         <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+         <a href="../components/admin_logout.php" onclick="return confirm('Sair deste site?');" class="delete-btn">Logout</a>
       </div>
 
    </section>

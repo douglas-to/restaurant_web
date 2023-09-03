@@ -23,14 +23,14 @@ if(isset($_POST['submit'])){
    $select_admin->execute([$name]);
    
    if($select_admin->rowCount() > 0){
-      $message[] = 'username already exists!';
+      $message[] = 'O nome de usuário já existe!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm passowrd not matched!';
+         $message[] = 'Confirme a senha não correspondida!';
       }else{
          $insert_admin = $conn->prepare("INSERT INTO `admin`(name, password) VALUES(?,?)");
          $insert_admin->execute([$name, $cpass]);
-         $message[] = 'new admin registered!';
+         $message[] = 'Novo administrador registrado!';
       }
    }
 
@@ -39,12 +39,12 @@ if(isset($_POST['submit'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>register</title>
+   <title>Registrar</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -62,31 +62,16 @@ if(isset($_POST['submit'])){
 <section class="form-container">
 
    <form action="" method="POST">
-      <h3>register new</h3>
-      <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="cpass" maxlength="20" required placeholder="confirm your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="register now" name="submit" class="btn">
+      <h3>Novo registro</h3>
+      <input type="text" name="name" maxlength="20" required placeholder="Nome de usuário" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" maxlength="20" required placeholder="Sua senha" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="cpass" maxlength="20" required placeholder="Confirme sua senha" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="Registrar" name="submit" class="btn">
    </form>
 
 </section>
 
 <!-- register admin section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
